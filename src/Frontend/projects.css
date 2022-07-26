@@ -1,0 +1,597 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+:root {
+    --main-color: #636464;
+    --light-main-color: #C3C4CA;
+    --dark-main-color: #1C1C1C;
+    --secondary-color: #0729D8;
+    --light-secondary-color: #7096D1;
+    --terciary-color: white;
+    --red-color: #D30417;
+}
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(136deg, var(--terciary-color), var(--light-main-color));
+    height: 100vh;
+    padding-left: 8vw;
+}
+/* begin of NAVIGATION BAR */
+/* begin of NAVIGATION BAR */
+.sidebar {
+    position: fixed;
+    left: 2vh;
+    top: 2vh;
+    bottom: 2vh;
+    background-color: var(--dark-main-color);
+    width: 100px;
+    padding-top: 4vh;
+    padding-left: 1.25vw;
+    padding-right: 1.25vw;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(28 28 28);
+}
+.sidebar-link,
+.sidebar-link div,
+.exit-link,
+.exit-link div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.active{
+    color: var(--red-color);
+}
+.sidebar-link,
+.exit-link {
+    color: var(--terciary-color);
+}
+.logoContainer {
+    display: flex;
+    justify-items: center;
+}
+.yamaha-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: scale-down;
+    flex: 1;
+    margin-bottom: 10vh;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.sidebar-link div,
+.exit-link {
+    margin-bottom: 8vh;
+    cursor: pointer;
+    font-size: 2vmin;
+}
+/* .sidebar-link div span,
+.exit-link span {
+    height: 3px;
+    width: 100%;
+    background-color: var(--light-main-color);
+    margin-bottom: 5px;
+} */
+.projects-icon,
+.people-icon,
+.exit-icon {
+    color: var(--terciary-color);
+    font-size: 2em;
+    margin-bottom: 1vh;
+}
+.home-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: scale-down;
+    margin-bottom: 8px;
+}
+.home-icon:hover,
+.people-icon:hover,
+.projects-icon:hover,
+.exit-icon:hover,
+.sidebar-link div:hover,
+.exit-link:hover {
+    color: var(--light-main-color);
+}
+.active{
+    color: var(--red-color);
+}
+.exit-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-bottom: 2vh;
+}
+/* end of NAVIGATION BAR */
+/* begin of SCREEN GRID */
+.grid-container-1,
+.grid-container-2 {
+    display: grid;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    column-gap: 2vw;
+    grid-template-columns: 3.5fr 6.5fr;
+}
+.grid-container-1 {
+    margin-top: 3vh;
+    height: 35%;
+}
+.grid-container-2 {
+    height: 57%;
+}
+.doughnut-chart {
+    width: 100%;
+    height: 100%;
+    background: green;
+}
+/* begin of PROJECTS CARDS*/
+.grid-container-1-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top_card2{
+    height: 32vh;
+    width: 29vw;
+    background:
+    linear-gradient(
+      rgba(1, 20, 192, 0.724),rgba(255, 255, 255, 0)
+    ),
+    url("./img/moto2.jpg") no-repeat;
+    background-size: 483px;
+    border-radius: 10px;
+}
+.top_card2 h3{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 12vh;
+    color: #fff;
+}
+.icons {
+    flex: 1;
+    height: 32vh;
+    background-image: linear-gradient(to bottom, var(--secondary-color), var(--light-secondary-color));
+    box-shadow: 0 7px 25px rgba(0,0,0,0.1);
+    color: var(--terciary-color);
+    border-radius: 20px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+.icons-1,
+.icons-2,
+.icons-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons-1 {
+    height: 12vh;
+}
+.stack-icon {
+    font-size: 4em;
+}
+.icons-2 {
+    height: 8vh;
+}
+.icons-3 {
+    height: 4vh;
+    text-align: center;
+}
+.placeholder{
+    color: orange;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 5px;
+    float: right;
+}
+/* end of PROJECTS CARDS*/
+/* begin of PROJECT DETAILS */
+.grid-container-2-0 {
+    background: var(--terciary-color);
+    padding: 10px;
+    position: relative;
+}
+.grid-container-2-0-0,
+.grid-container-2-0-1,
+.grid-container-2-0-2,
+.grid-container-2-0-5 {
+    display: flex;
+    flex-direction: row;
+    height: 8%;
+    margin-bottom: 5px;
+}
+.grid-container-2-0-0 {
+    flex: 1;
+    color: var(--terciary-color);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    font-weight: 400;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, var(--secondary-color), var(--light-secondary-color));
+    border-radius: 4px;
+}
+.grid-container-2-0-1,
+.grid-container-2-0-2,
+.grid-container-2-0-3,
+.grid-container-2-0-4,
+.grid-container-2-0-5 {
+    border: 1px solid var(--light-main-color);
+    border-radius: 2px;
+}
+.grid-container-2-0-1-1,
+.grid-container-2-0-1-2,
+.grid-container-2-0-2-1,
+.grid-container-2-0-2-2,
+.grid-container-2-0-5-1,
+.grid-container-2-0-5-2 {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    font-size: 16px;
+}
+.grid-container-2-0-1-1,
+.grid-container-2-0-2-1,
+.grid-container-2-0-3-1,
+.grid-container-2-0-4-1 {
+    margin-left: 20px;
+}
+.grid-container-2-0-1-1,
+.grid-container-2-0-1-2,
+.grid-container-2-0-5-1,
+.grid-container-2-0-5-2 {
+    font-weight: bold;
+}
+.grid-container-2-0-1-1 span,
+.grid-container-2-0-1-2 span,
+.grid-container-2-0-5-1 span,
+.grid-container-2-0-5-2 span {
+    font-weight: normal;
+}
+.grid-container-2-0-1-1 span,
+.grid-container-2-0-1-2 span,
+.grid-container-2-0-2-1 span,
+.grid-container-2-0-2-2 span,
+.grid-container-2-0-5-1 span,
+.grid-container-2-0-5-2 span {
+    margin-left: 5px;
+}
+.grid-container-2-0-2-1,
+.grid-container-2-0-2-2 {
+    flex: 1;
+    font-weight: bold;
+}
+.grid-container-2-0-2-1 span,
+.grid-container-2-0-2-2 span {
+    font-weight: normal;
+}
+.grid-container-2-0-3-1,
+.grid-container-2-0-4-1 {
+    height: 7%;
+    display: flex;
+    flex-direction: row;
+}
+.grid-container-2-0-3 {
+    display: block;
+    height: fit-content;
+    max-height: 30%;
+    overflow-y: scroll;
+}
+.grid-container-2-0-3-1,
+.grid-container-2-0-4-1 {
+    padding-top: 6px;
+    font-weight: bold;
+}
+.grid-container-2-0-3-2,
+.grid-container-2-0-4-2 {
+    display: flex;
+    flex-direction: row;
+}
+.grid-container-2-0-3-2-1 {
+    flex: 3;
+}
+.grid-container-2-0-3-2-1 div,
+.grid-container-2-0-3-2-2 div {
+    display: flex;
+    justify-content: left;
+    padding-left: 4vw;
+}
+.grid-container-2-0-3-2-2 {
+    flex: 2;
+}
+.grid-container-2-0-4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 2vh;
+}
+.grid-container-2-0-4-2-1,
+.grid-container-2-0-4-2-2,
+.grid-container-2-0-4-2-3 {
+    flex: 1;
+    margin-top: 15px;
+}
+.grid-container-2-0-4-2-1 div,
+.grid-container-2-0-4-2-2 div,
+.grid-container-2-0-4-2-3 div {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+.buttonActive {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    border-radius: 10%;
+    background-color: var(--light-main-color);
+}
+.grid-container-2-0-5-1,
+.grid-container-2-0-5-2 {
+    flex: 1;
+}
+.grid-container-2-0-5-1 {
+    padding-left: 20px;
+    overflow: hidden;
+}
+.grid-container-2-0-5-2 {
+    margin-left: 10px;
+}
+.btn-primary {
+    position: absolute !important;
+    bottom: 10px !important;
+    right: 20px !important;
+    height: 5vh !important;
+    width: 8vw !important;
+    color: var(--terciary-color) !important;
+    background: var(--light-secondary-color) !important;
+    padding: 2px 0;
+}
+.btn-primary:hover {
+    color: var(--light-main-color) !important;
+}
+.btn-primary:active {
+    color: var(--main-color) !important;
+    background: var(--secondary-color) !important;
+}
+/* end of PROJECT DETAILS */
+/* begin of PROJECT LIST */
+.grid-container-2-1 {
+    background: var(--terciary-color);
+    padding: 10px;
+    position: relative;
+    overflow-y: scroll;
+    max-height: 58vh;
+}
+.grid-container-2-1-0,
+.grid-container-2-1-1 {
+    display: flex;
+    flex-direction: row;
+    height: 8%;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.grid-container-2-1-0 {
+    flex: 1;
+    color: var(--terciary-color);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    font-weight: 400;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, var(--secondary-color), var(--light-secondary-color));
+    border-radius: 4px;
+}
+.grid-container-2-1-1 {
+    border: 1px solid var(--light-main-color);
+    border-radius: 2px;
+    align-items: center;
+}
+.grid-container-2-1-1-1,
+.grid-container-2-1-1-2,
+.grid-container-2-1-1-3,
+.grid-container-2-1-1-4 {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+.grid-container-2-1-1-1 {
+    margin-left: 20px;
+    font-weight: bold;
+    width: 5vw;
+    justify-content: center;
+}
+.grid-container-2-1-1-2 {
+    width: 18vw;
+    font-weight: bold;
+    justify-content: left;
+    padding-left: 2vw;
+}
+.grid-container-2-1-1-3,
+.grid-container-2-1-1-4 {
+    width: 10vw;
+    font-weight: bold;
+    justify-content: left;
+}
+.grid-container-2-1-1-4 {
+    margin-left: 1vw;
+}
+.grid-container-2-1-1-1 span,
+.grid-container-2-1-1-2 span,
+.grid-container-2-1-1-3 span,
+.grid-container-2-1-1-4 span {
+    font-weight: normal;
+    margin-left: 5px;
+}
+.edit-btn button,
+.del-btn button {
+    border: none;
+    font-size: 20px;
+    background-color: var(--terciary-color);
+    padding-top: 3px;
+}
+.del-btn button {
+    margin-left: 2vw;
+}
+/* end of PROJECT LIST */
+/* end of SCREEN GRID */
+/* begin of MODAL */
+.modal-content{
+    margin-top: -13px;
+    height: 95vh;
+    border: 4px solid #fff;
+    background-color: #eee;
+}
+.modal-body {
+    display: block !important;
+    margin: auto;
+    overflow-y: scroll;
+}
+.btn-modal{
+    margin-top: 4px;
+    margin-left: 20px;
+    float: right;
+    height: 35px;
+    width: 90px;
+    border: none;
+    background-color: var(--light-secondary-color);
+    color: #fff;
+    border-radius: 5px;
+    transition: .3s;
+}
+.btn-modal-cancel{
+    margin-top: 4px;
+    float: right;
+    height: 35px;
+    width: 90px;
+    border: none;
+    background-color: #fff;
+    color: var(--light-secondary-color);
+    border-radius: 2px;
+    border: 4px solid var(--light-secondary-color);
+    transition: .3s;
+}
+.btn-modal:hover{
+    background-color: var(--dark-main-color);
+    color: #fff;
+}
+.btn-modal-cancel:hover{
+    background-color: #fff;
+    color: var(--dark-main-color);
+    border: 4px solid var(--dark-main-color);
+}
+.input-box-projects {
+    padding: 6px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.input-box-projects input{
+    width: 400px;
+    border: 1px solid var(--dark-main-color);
+    height: 35px;
+    border-radius: 5px;
+}
+.input-box-projects select{
+    width: 400px;
+    border: 1px solid var(--dark-main-color);
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 6px;
+}
+.new-item{
+    margin-top: 10px;
+    color: #fff;
+    background-color: var(--light-secondary-color);
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+    transition: .3s;
+}
+.new-item:hover{
+    background-color: var(--dark-main-color);
+    cursor: pointer;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.modal-header{
+    padding: 10px 20px 10px 20px;
+    background-image: linear-gradient(to right, var(--secondary-color), var(--light-secondary-color));
+    color: #fff;
+    height: 50px;
+    margin-top: 0;
+    display: flex;
+}
+.modal-header .yamaha-logo{
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin-bottom: 0;
+    margin-right: -60px;
+}
+.modal-footer {
+    display: block !important;
+}
+.modal_close{
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.modal_close ion-icon{
+    font-size: 30px;
+    margin-top: 6px;
+    transition: .3s;
+}
+.modal_close:hover ion-icon{
+    color: var(--light-secondary-color);
+}
+.emp_allo_hours{
+    display: flex;
+}
+.emp_allo_hours button{
+    margin-left: -29px;
+    width: 30px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: var(--dark-main-color);
+    color: #fff;
+    transition: .3s;
+    height: 35px;
+}
+.add_btn{
+    margin-left: -29px;
+    width: 30px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: var(--dark-main-color);
+    color: #fff;
+    transition: .3s;
+    height: 30px;
+}
+/* end of MODAL */
+.pageContainer {
+    position: absolute;
+    top: 2vh;
+    left: calc(2vh + 100px);
+    right: 0;
+    padding: 0 20px;
+}

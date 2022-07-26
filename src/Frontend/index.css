@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@font-face { 
+    font-family: 'slimsans';
+    src: url('font/SlimSansSerif-Bold.ttf');
+    src: local('slimsans'), local('slimsans'), url('font/SlimSansSerif-Bold.ttf') format('truetype');
+ }
+
+
+:root {
+    --main-color: #636464;
+    --light-main-color: #c3c4ca;
+    --dark-main-color: #1c1c1c;
+    --secondary-color: #0729d8;
+    --light-secondary-color: #7096d1;
+    --terciary-color: white;
+}
+
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.body {
+    height: 100vh;
+    background: var(--light-main-color);
+ }
+
+.height {
+    height: 100vh;
+}
+
+.login-cover {
+    width: 45vw;
+    height: 100vh;
+    background-color: #000000;
+    float: left;
+}
+
+.login-cover video {
+    position: fixed;
+    top: 20%;
+    width: 40%;
+    height: 40%;
+}
+
+.login-form {
+    position: fixed;
+    left: 60%;
+    top: 10%;
+    margin-top: 16vh;
+    display: grid;
+}
+
+.login-form h1 {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    color: #333;
+    
+    font-size: 40px;
+}
+
+.login-form span {
+    height: 1px;
+    width: 350px;
+    background-color: #333;
+    margin: 20px 0 20px 0;
+}
+
+.login-form input {
+    height: 45px;
+    width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 15px;
+    font-family: 'Inter', sans-serif;
+    margin: 2px solid #333;
+    background-color: rgba(13, 162, 254, 0.409);
+    color: rgb(255, 255, 255);   
+}
+
+.login-form a {
+    padding: 15px;
+    border-radius: 10px;
+    border-style: none;
+    font-family: 'Inter', sans-serif;
+    width: 160px;
+    margin-left: 23%;
+    margin-top: 5%;
+}
+
+.login-form button {
+    padding: 15px;
+    border-radius: 10px;
+    border-style: none;
+    font-family: 'Inter', sans-serif;
+    width: 160px;
+    cursor: pointer;
+    background-color: #094ae3;
+    color: #fff;
+}
+
+.login-form button:hover { 
+    background-color: #2465ff;
+}

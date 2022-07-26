@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+:root {
+    --main-color: #636464;
+    --light-main-color: #C3C4CA;
+    --dark-main-color: #1C1C1C;
+    --secondary-color: #0729D8;
+    --light-secondary-color: #7096D1;
+    --terciary-color: white;
+    --red-color: #D30417;
+}
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #F8FAFB;
+    height: 100vh;
+    padding-left: 8vw;
+}
+/* begin of NAVIGATION BAR */
+.sidebar {
+    position: fixed;
+    left: 2vh;
+    top: 2vh;
+    bottom: 2vh;
+    background-color: var(--dark-main-color);
+    width: 100px;
+    padding-top: 4vh;
+    padding-left: 1.25vw;
+    padding-right: 1.25vw;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(28 28 28);
+}
+.sidebar-link,
+.sidebar-link div,
+.exit-link,
+.exit-link div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar-link,
+.exit-link {
+    color: var(--terciary-color);
+}
+.logoContainer {
+    display: flex;
+    justify-items: center;
+}
+.yamaha-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: scale-down;
+    flex: 1;
+    margin-bottom: 10vh;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.sidebar-link div,
+.exit-link {
+    margin-bottom: 8vh;
+    cursor: pointer;
+    font-size: 2vmin;
+}
+/* .sidebar-link div span,
+.exit-link span {
+    height: 3px;
+    width: 100%;
+    background-color: var(--light-main-color);
+    margin-bottom: 5px;
+} */
+.projects-icon,
+.people-icon,
+.exit-icon {
+    color: var(--terciary-color);
+    font-size: 2em;
+    margin-bottom: 1vh;
+}
+.home-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: scale-down;
+    margin-bottom: 8px;
+}
+.home-icon:hover,
+.people-icon:hover,
+.projects-icon:hover,
+.exit-icon:hover,
+.sidebar-link div:hover,
+.exit-link:hover {
+    color: var(--light-main-color);
+}
+.active{
+    color: var(--red-color);
+}
+.exit-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-bottom: 2vh;
+}
+/* end of NAVIGATION BAR */
+/* charts */
+.dashboard{
+    background-color: rgb(243, 243, 243);
+}
+.graphBox{
+    margin-left: 40px;
+    position: relative;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    min-height: 200px;
+}
+.graphBox .box{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    transition: .5s;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+.limite{
+    background-color: red;
+    width: 530px;
+    height: 20px;
+    position: absolute;
+}
+/*-------------------------------------------*/
+/*---------------Inicio Icons----------------*/
+/*-------------------------------------------*/
+.icons-container{
+    display: grid;
+    margin-left: 40px;
+    margin-right: 1.8vw;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(20.7rem, 1fr));
+    gap: 1.5rem;
+}
+.icons-container .icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    color: #fff;
+    background-image: linear-gradient(to bottom right, var(--secondary-color) , var(--light-secondary-color));
+    border-radius: 3px;
+}
+/* .icons-container .blues{
+    background-image: linear-gradient(to right, rgb(17, 72, 255) , rgb(57, 241, 254));
+}
+.icons-container .greens{
+    background-image: linear-gradient(to right, rgb(28, 163, 37) ,rgb(90, 254, 57));
+}
+.icons-container .yellows{
+    background-image: linear-gradient(to right, rgb(255, 124, 17) ,rgb(226, 226, 9));
+}
+.icons-container .reds{
+    background-image: linear-gradient(to right, rgb(255, 49, 17) , rgb(254, 142, 57));
+} */
+.icons-container .icons ion-icon{
+    height: 5.9rem;
+    width: 5.9rem;
+    line-height: 5.9rem;
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+}
+.icons-container .icons .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+.icons-container .icons .content h3{
+    color: var(--yellow);
+    font-size: 2.5rem;
+    cursor: default;
+}
+.icons-container .icons .content p{
+    font-size: 1.5rem;
+    cursor: default;
+}
+.pageContainer {
+    position: absolute;
+    top: 2vh;
+    left: calc(2vh + 100px);
+    right: 0;
+    padding: 0 40px;
+}
+.titleContainer > h1 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: all .2s;
+}
+.titleContainer > h1:hover {
+    transform: scale(1.05);
+}
+.charts {
+    display: flex;
+    grid-gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.chartBox {
+    background-color: #fff;
+    border-radius: 20px;
+    min-height: 350px;
+    flex: 1 1 50%;
+    padding: 30px;
+}
+.chartTitle {
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    padding: 0 10px;
+}
+.chartBody {
+    padding: 0 10px;
+}
+.iconsContainer {
+    display: flex;
+    grid-gap: 40px;
+    align-items: center;
+    justify-content: stretch;
+}
+.iconBox {
+    background-image: linear-gradient(to bottom, var(--secondary-color), var(--light-secondary-color));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    flex: 1;
+    border-radius: 20px;
+}
+.iconBox > ion-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--terciary-color);
+}
+.iconBox > h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--terciary-color);
+}
+.iconBox> p {
+    font-size: 14px;
+    color: var(--terciary-color);
+}
